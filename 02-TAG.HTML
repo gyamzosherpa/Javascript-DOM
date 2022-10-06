@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>tag name</title>
+  </head>
+  <body>
+    <h1>heading1</h1>
+    <p>paragraph1</p>
+    <div id="div1">
+      <h1>heading2</h1>
+      <p>paragraph2</p>
+      <h1>heading3</h1>
+      <p>paragraph3</p>
+    </div>
+
+    <script>
+      let div1 = document.getElementById('div1');
+
+      // let tag = document.getElementsByTagName('h1'); //all 'h1' value changes
+      let tag = div1.getElementsByTagName('h1'); //only 'h1' inside that div changes
+
+      for (let i = 0; i < tag.length; i++) {
+        tag[i].innerHTML = 'heading changes';
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Create-Append</title>
+    <style>
+      #div1 {
+        height: 200px;
+        width: 200px;
+        background-color: green;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="div1">
+      <p>Paragraph1</p>
+    </div>
+    <ul id="list">
+      <li>list one</li>
+      <li>list two</li>
+    </ul>
+
+    <script>
+      let elm = document.getElementById('div1');
+      let h1 = document.createElement('h1'); //create h1 tag
+      elm.appendChild(h1); //add h1 tag
+      h1.innerHTML = '<a href="#">hello</a>'; //h1 tag added after p tag
+
+      //another example
+      let list1 = document.getElementById('list');
+      let new_list = document.createElement('li');
+
+      new_list.textContent = 'list three';
+      list1.appendChild(new_list); //new list added i.e list two
+
+      //add paragraph outside div
+      let elm2 = document.getElementById('div1');
+      let p2 = document.createElement('p'); //p tag created
+
+      // elm2.appendChild(p2); // p tag added inside div
+      //if you have to add outside div, than use document.body
+      document.body.appendChild(p2);
+
+      //add Text
+      // let text = document.createTextNode('paragraph two'); //create text
+
+      p2.textContent = 'paragraph two';
+      p2.appendChild(text); // text added to p tag
+
+      //add class and id
+      p2.className = 'p1'; //check in browser, elements
+      p2.id = paragraph1;
+    </script>
+  </body>
+</html>

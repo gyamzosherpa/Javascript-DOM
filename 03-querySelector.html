@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>querySelector</title>
+  </head>
+  <body>
+    <p class="p1">hello world</p>
+    <p class="p2">hello world 2</p>
+    <p class="p2">hello world 3</p>
+    <h1 id="heading1">gyamzo sherpa</h1>
+    <h1 id="heading1">gyamzo sherpa2</h1>
+
+    <script>
+      let paragraph = (document.querySelector('.p1').innerHTML = 'hello');
+
+      //if we have same class names, so we can use:
+      let paragraph2 = document.querySelectorAll('.p2'); //it becomes an array
+      for (i = 0; i < paragraph2.length; i++) {
+        paragraph2[i].innerHTML = 'hello universe'; //hello universe
+      }
+
+      //if we have id, use "#"
+      let heading = (document.querySelector('#heading1').innerHTML =
+        'GYAMZO SHERPA');
+    </script>
+  </body>
+</html>

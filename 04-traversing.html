@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Traversing elements</title>
+  </head>
+  <body>
+    <h2 class="intro">traversing elements</h2>
+    <ul>
+      <li id="intro">1</li>
+      <li>2</li>
+      <li>3</li>
+    </ul>
+
+    <ul id="intro2">
+      <li>a</li>
+      <li>b</li>
+      <li>c</li>
+    </ul>
+
+    <ul id="intro3">
+      <li>i</li>
+      <li>ii</li>
+      <li>iii</li>
+    </ul>
+
+    <ul>
+      <li>i</li>
+      <li id="sibling">ii</li>
+      <li>iii</li>
+    </ul>
+    <script>
+      //child to parent
+      let element = document.getElementById('intro');
+      let parent1 = element.parentElement; //selects the parent i.e. ul
+      parent1.innerHTML = '<h1>travesre me</h1>';
+      console.log(parent1);
+
+      //parent to child
+      let element2 = document.getElementById('intro2');
+      //let child = element2.firstElementChild;
+      let child = element2.lastElementChild;
+      child.innerHTML = 'list a';
+
+      //selects all child
+      let element3 = document.getElementById('intro3');
+      let child2 = element3.children;
+
+      for (i = 0; i < child2.length; i++) {
+        child2[i].innerHTML = 'list a';
+      }
+
+      //siblings select
+      let element4 = document.getElementById('sibling');
+      // let child3 = element4.previousElementSibling;
+      let child3 = element4.nextElementSibling;
+      child3.innerHTML = 'sibling selected';
+    </script>
+  </body>
+</html>
