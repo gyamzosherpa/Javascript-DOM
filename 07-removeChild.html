@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>remove child</title>
+  </head>
+  <body>
+    <ul id="list">
+      <li>Home</li>
+      <li>About</li>
+      <li>Services</li>
+    </ul>
+
+    <script>
+      let list = document.getElementById('list');
+      let elm = list.firstElementChild;
+
+      // list.removeChild(elm); //remove first list i.e: Home
+
+      //remove whole ul tag
+      document.body.removeChild(list); //remove ul
+
+      //copy element
+      //let copy = list.cloneNode(true);
+      // if true not mention it does'nt copy child elements
+
+      //document.body.appendChild(copy); //add another ul in body
+    </script>
+  </body>
+</html>

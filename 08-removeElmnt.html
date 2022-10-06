@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>removeElement</title>
+  </head>
+  <body>
+    <ul id="menu">
+      <li>Home</li>
+      <li id="services">services</li>
+      <li>About</li>
+    </ul>
+
+    <script>
+      let parent = document.getElementById('menu');
+      //let item = document.getElementById('services');
+      // item.textContent = 'contact'; // second list changes
+
+      let item2 = document.createElement('li');
+      item2.textContent = 'contact me';
+
+      let replace = parent.firstElementChild.nextElementSibling;
+      parent.replaceChild(item2, replace); //services changes to contact me
+    </script>
+  </body>
+</html>

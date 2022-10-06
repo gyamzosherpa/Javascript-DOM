@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>inline-style</title>
+  </head>
+  <body>
+    <button id="btn">send</button>
+    <ul id="nav">
+      <li>Home</li>
+      <li>About</li>
+      <li>Services</li>
+    </ul>
+
+    <img
+      id="img1"
+      src="https://cdn.pixabay.com/photo/2019/06/02/17/33/woman-4246954__340.jpg"
+      alt=""
+    />
+    <h1 id="heading1">hello world</h1>
+    <script>
+      //one css at a time
+      let btn = document.querySelector('#btn');
+      btn.style.backgroundColor = 'green'; //change background
+      btn.style.color = 'white'; //change text color
+      btn.style.padding = '10px 30px';
+      btn.style.borderRadius = '5px';
+      btn.style.border = 'none';
+
+      let navbar = document.querySelector('#nav');
+      navbar.style.display = 'flex';
+      navbar.style.height = '50px';
+      navbar.style.backgroundColor = 'purple';
+      navbar.style.color = 'white';
+      navbar.style.gap = '20px';
+      navbar.style.listStyle = 'none';
+      navbar.style.justifyContent = 'center';
+      navbar.style.alignItems = 'center';
+
+      //using setAttribute to add css
+      let image = document.querySelector('#img1');
+      image.setAttribute('style', 'border:10px solid black; padding:20px');
+
+      //using cssText
+      let heading = document.querySelector('#heading1');
+      heading.style.cssText += 'background:green; border:2px solid black';
+    </script>
+  </body>
+</html>
