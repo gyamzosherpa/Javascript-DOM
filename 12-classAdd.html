@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>class add</title>
+    <style>
+      .color {
+        background-color: green;
+        color: blue;
+      }
+      .dim {
+        padding: 100px;
+      }
+      /*class added using JS*/
+      .new_bg {
+        border: 4px solid black;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="div1" class="color dim">
+      <p>Add class</p>
+    </div>
+
+    <script>
+      let box = document.querySelector('#div1');
+      // console.log(box.className); //shows className
+      // box.className += ' background'; //new class added "background"
+      //console.log(box.classList); //shows class list in array
+
+      // for (let css of box.classList) {
+      //  console.log(css); //shows all available classes, one bye one
+      //}
+
+      //....class add.....
+      box.classList.add('new_bg'); //new class added, "new_bg"
+      //....class remove.....
+      // box.classList.remove('new_bg'); //class removed, "new_bg"
+      //class replace
+      box.classList.replace('dim', 'new_dim'); //dim replace with "new_dim"
+      box.classList.toggle('dim'); //dim class added again
+    </script>
+  </body>
+</html>
