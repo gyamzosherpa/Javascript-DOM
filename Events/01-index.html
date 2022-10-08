@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dom events</title>
+  </head>
+  <body>
+    <button id="btn1">Click</button>
+    <button id="btn2" onclick="btnClick2()">click again</button>
+    <button id="btn3">Hello</button>
+    <script>
+      function btnClick() {
+        alert('btn clicked');
+      }
+
+      let btn = document.querySelector('#btn1');
+      btn.addEventListener('click', btnClick);
+
+      function btnClick2() {
+        alert('btn clicked again');
+      }
+
+      //multiple event listeners
+      let btn3 = document.getElementById('btn3');
+      btn3.addEventListener('click', function () {
+        console.log('clicked');
+      });
+
+      //mouse over
+      let btn4 = document.getElementById('btn3');
+      btn4.addEventListener('mouseover', function () {
+        console.log('mouse activated');
+      });
+
+      let btn5 = document.getElementById('btn3');
+      btn5.addEventListener('mouseout', function () {
+        console.log('mouse deactivated');
+      });
+    </script>
+  </body>
+</html>
