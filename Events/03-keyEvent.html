@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>key up</title>
+  </head>
+  <body>
+    <input type="text" id="username" />
+    <h1 id="msg"></h1>
+
+    <script>
+      let textBox = document.querySelector('#username');
+      textBox.addEventListener('keyup', function () {
+        //value: what you type
+        let textEntered = textBox.value;
+        document.querySelector('#msg').innerText = textEntered;
+      });
+
+      //window: whole window screen
+      window.addEventListener('keydown', function (e) {
+        console.log(e.key);
+      });
+    </script>
+  </body>
+</html>
