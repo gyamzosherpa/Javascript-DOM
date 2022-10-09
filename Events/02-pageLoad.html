@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>pageLoad</title>
+  </head>
+  <body>
+    <img
+      id="img1"
+      src="../images/animal_big_carnivore.jpg"
+      height="600"
+      alt=""
+    />
+
+    <script>
+      window.addEventListener('DOMContentLoaded', function () {
+        console.log('dom tree created');
+      });
+
+      let img = document.querySelector('#img1');
+      img.addEventListener('load', function () {
+        console.log('loaded completely');
+      });
+
+      // window.addEventListener('load', function () {
+      //  console.log('fully loaded');
+      // });
+    </script>
+  </body>
+</html>
