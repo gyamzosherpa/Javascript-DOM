@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BOM</title>
+  </head>
+  <body>
+    <script>
+      let x = 20;
+      var y = 40;
+
+      //global function are property of window object
+      function hello() {
+        console.log('hello');
+        function hello1() {
+          console.log('hello 2');
+        }
+        hello1(); //"hello 2"..... //not a global function
+        // window.hello1(); //.."undefined".... //not a propert of window object
+      }
+      hello(); // by default it a window object property
+      window.hello(); //property of window object
+
+      console.log(window.x); //"undefined", not a property of window object, because of "let"
+      console.log(window.y); //"40",,, //"var", property of window object
+
+      //object: if declare using let keyword, it wont be a part of window object
+      var person = {
+        name: 'gyamzo',
+        age: 27,
+        hello: function () {
+          //not a global function
+          console.log(window.hello); //undefined
+        },
+      };
+      console.log(window.person); //see the output
+    </script>
+  </body>
+</html>
